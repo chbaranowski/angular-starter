@@ -1,0 +1,25 @@
+.border {
+  border: dotted 1px;
+  margin: 5px 0px 5px 0px;
+}
+
+.box-bordered {
+  @extend .border;
+  height: 100px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+}
+
+.header {
+  @extend .box-bordered;
+}
+
+.footer {
+  @extend .box-bordered;
+}
+
+.content {
+  @extend .border;
+  padding-top: 10px;
+}

@@ -1,0 +1,9 @@
+<div class="row">
+  <ul class="nav nav-pills">
+    <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['list']">List</a></li>
+    <li [routerLinkActive]="['active']" role="presentation"><a [routerLink]="['table']">Table</a></li>
+  </ul>
+</div>
+<div class="row">
+  <router-outlet></router-outlet>
+</div>
