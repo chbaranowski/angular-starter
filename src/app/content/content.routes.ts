@@ -8,4 +8,3 @@ const ContentRoutes: Routes = [
 ];
 
 export const ContentRoutesModule = RouterModule.forChild(ContentRoutes);
-console.log(ContentRoutesModule.ngModule.name)

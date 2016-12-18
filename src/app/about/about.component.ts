@@ -8,7 +8,12 @@ import { DataSource, CarDataSource } from './data.service';
 })
 export class AboutComponent {
 
-  constructor(private router: Router) {
+  selectedDataSource: string
+
+  constructor(private router: Router,
+              @Inject('DataSource') 
+              private dataSources: DataSource[]) {
+      this.selectedDataSource = dataSources[0].name
   }
 
   clickAction() {

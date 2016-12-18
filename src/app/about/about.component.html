@@ -1,6 +1,11 @@
 <h1>About</h1>
 <p>
-  <a class="btn" (click)="clickAction()">Goto Home</a>
+  <a class="btn btn-default" (click)="clickAction()">Goto Home</a>
 </p>
-
-<data-viewer dataSource="car"></data-viewer>
+<div class="form-group">
+  <label>Select Data Source:</label>
+  <select class="form-control" [(ngModel)]="selectedDataSource">
+    <option *ngFor="let dataSource of dataSources">{{dataSource.name}}</option>
+  </select>
+</div>
+<data-viewer dataSource="{{selectedDataSource}}"></data-viewer>

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: 'Table'
+  templateUrl: './table.component.html'
 })
-export class TableComponent {   
+export class TableComponent {  
+  
+    data = ['Christian', 'Martin', 'Thomas']
+ 
 }
