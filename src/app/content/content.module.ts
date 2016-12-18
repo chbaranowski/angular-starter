@@ -19,7 +19,6 @@ import { ListComponent} from './list.component';
   ], 
   exports: [
     ContentComponent,
-    ContentRoutesModule.ngModule
   ]
 })
 export class ContentModule {

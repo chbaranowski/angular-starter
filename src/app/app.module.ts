@@ -1,27 +1,27 @@
 import { BrowserModule }  from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ClassProvider } from '@angular/core';
 
 import { AppRoutesModule } from './app.routes';
 
 import { AppComponent } from './app.component';
 import { HomeComponent} from './home/home.component';
-import { AboutComponent } from './about/about.component';
 
+import { AboutModule } from './about/about.module';
 import { ContentModule } from './content/content.module';
-import { ContentRoutesModule } from './content/content.routes';
 
 @NgModule({
   imports: [
     BrowserModule, 
     AppRoutesModule,
-    ContentModule
+    ContentModule,
+    AboutModule
   ], 
   declarations: [
     AppComponent, 
-    HomeComponent,
-    AboutComponent
+    HomeComponent
   ], 
-  providers: [], 
+  providers: [
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule {

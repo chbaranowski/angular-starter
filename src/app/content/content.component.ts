@@ -15,8 +15,6 @@ export class ContentComponent implements OnInit, OnDestroy {
 	}
 
   ngOnInit(): void {
-    console.log('Content created');
-    //this.router.navigate(['./list']);
   }
 
   ngOnDestroy(): void {

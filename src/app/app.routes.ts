@@ -11,18 +11,18 @@ import { ContentRoutesModule } from './content/content.routes';
 const routes: Routes = [
   { 
     path: '', 
-    redirectTo: 'home', 
+    redirectTo: 'home/list', 
+    pathMatch: 'full' 
+  },
+  { 
+    path: 'home', 
+    redirectTo: 'home/list', 
     pathMatch: 'full' 
   },
   { 
     path: 'home',  
     component: HomeComponent, 
-    loadChildren: () => ContentModule,
- //   children: [
- //      { path: '', redirectTo: 'list', pathMatch: 'full'},
- //      { path: 'list',   component: ListComponent },
- //      { path: 'table',  component: TableComponent },
- //   ]
+    loadChildren: () => ContentModule
   },
   { 
     path: 'about',  
