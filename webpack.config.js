@@ -1,3 +1,5 @@
+var path = require('path');
+
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
@@ -34,13 +36,13 @@ module.exports = {
       // loader config for global css files
       {
           test: /\.scss$/,
-          exclude: [/node_modules/, /src\/app/],
+          exclude: [path.resolve('node_modules'), path.resolve('src', 'app')],
           loader: extractCSS.extract('style-loader', 'raw!postcss!sass'),
       },
       // loader config for angular component styles 
       {   
           test: /\.scss$/, 
-          exclude: [/node_modules/, /src\/styles/], 
+          exclude: [path.resolve('node_modules'), path.resolve('src', 'styles')],
           loader: 'raw!postcss!sass'
       },
       {

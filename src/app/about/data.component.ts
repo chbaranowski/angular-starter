@@ -1,5 +1,6 @@
-import { Component, Input, OnInit, Inject } from '@angular/core';
-import { Subject }    from 'rxjs/Subject';
+import { Subscription } from 'rxjs/Rx';
+import { Component, Inject, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
 
 import { DataSource, DataSourceService } from './data.service';
 
@@ -18,17 +19,17 @@ import { Injectable } from '@angular/core';
 })
 export class DataComponent implements OnInit {
 
-  constructor(@Inject('DataSource') 
-              private dataSourceInjected: DataSource[], 
-              private dataSourceService: DataSourceService) {}
+  constructor( @Inject('DataSource')
+  private dataSourceInjected: DataSource[],
+    private dataSourceService: DataSourceService) { }
 
   ngOnInit(): void {
   }
 
-  @Input('dataSource') set dataSourceName(dataSourceName : string) {
+  @Input('dataSource') set dataSourceName(dataSourceName: string) {
     var dataSource = this.dataSourceInjected
       .find(dataSource => dataSource.name === dataSourceName)
-    if(!dataSource) {
+    if (!dataSource) {
       throw new Error(`No data source service configured for name ${this.dataSourceName}`);
     }
     this.dataSourceService.selectDataSource(dataSource);
@@ -42,17 +43,23 @@ export class DataComponent implements OnInit {
               <li class="list-group-item" *ngFor="let value of data">{{value}}</li>
             </ul>`
 })
-export class ChildDataComponent implements OnInit {
+export class ChildDataComponent implements OnInit, OnDestroy {
 
   data: string[];
+
+  subscription: Subscription;
 
   constructor(private dataSourceService: DataSourceService) { }
 
   ngOnInit(): void {
     this.data = this.dataSourceService.dataSource.getData();
-    this.dataSourceService.dataSourceChanged$.subscribe(dataSource => {
+    this.subscription = this.dataSourceService.dataSourceChanged$.subscribe(dataSource => {
       this.data = dataSource.getData();
     });
   }
-  
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
 }
