@@ -1,11 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'my-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  templateUrl: './routers.component.html',
+  styleUrls: ['./routers.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class RoutersComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     console.log('Create Home Component');

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { InternetDataSource } from './internet.component';
+import { dataSource } from '../datasource/datasource.service';
 
 @NgModule({
   imports: [],
@@ -8,7 +9,7 @@ import { InternetDataSource } from './internet.component';
   declarations: [],
   providers: [
     {
-      provide: 'DataSource',
+      provide: dataSource,
       useClass: InternetDataSource,
       multi: true
     }

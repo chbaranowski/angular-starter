@@ -1,10 +1,9 @@
 import { Subscription } from 'rxjs/Rx';
-import { Component, Inject, Input, OnDestroy, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import { Component, Inject, Input, OnDestroy, OnInit, Injectable } from '@angular/core';
 
-import { DataSource, DataSourceService } from './data.service';
+import { DataSource, DataSourceService } from './datasource.service';
 
-import { Injectable } from '@angular/core';
 
 @Component({
   selector: 'data-viewer',
@@ -17,14 +16,11 @@ import { Injectable } from '@angular/core';
     <data-viewer-details></data-viewer-details>`,
   providers: [DataSourceService]
 })
-export class DataComponent implements OnInit {
+export class DataViewerComponent {
 
   constructor( @Inject('DataSource')
   private dataSourceInjected: DataSource[],
     private dataSourceService: DataSourceService) { }
-
-  ngOnInit(): void {
-  }
 
   @Input('dataSource') set dataSourceName(dataSourceName: string) {
     var dataSource = this.dataSourceInjected
@@ -43,7 +39,7 @@ export class DataComponent implements OnInit {
               <li class="list-group-item" *ngFor="let value of data">{{value}}</li>
             </ul>`
 })
-export class ChildDataComponent implements OnInit, OnDestroy {
+export class ChildDataViewerComponent implements OnInit, OnDestroy {
 
   data: string[];
 

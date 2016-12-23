@@ -4,24 +4,23 @@ import { NgModule, ClassProvider, Injectable } from '@angular/core';
 import { AppRoutesModule } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { HomeComponent} from './home/home.component';
 
-import { AboutModule } from './about/about.module';
 import { ContentModule } from './content/content.module';
-import { DataSource } from './about/data.service';
 import { InternetModule } from './internet/internet.module';
+import { DataSourceModule } from './datasource/datasource.module';
+import { RoutersComponent } from './routers/routers.component';
 
 @NgModule({
   imports: [
     BrowserModule, 
     AppRoutesModule,
     ContentModule,
-    AboutModule,
+    DataSourceModule,
     InternetModule
   ], 
   declarations: [
     AppComponent, 
-    HomeComponent
+    RoutersComponent
   ], 
   providers: [], 
   bootstrap: [AppComponent]
