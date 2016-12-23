@@ -13,8 +13,7 @@ import { DataSource, DataSourceService } from './datasource.service';
       <input class="form-control" type="text" placeholder="{{dataSourceService.dataSource.name}}" readonly>
     </div>
 
-    <data-viewer-details></data-viewer-details>`,
-  providers: [DataSourceService]
+    <data-viewer-details></data-viewer-details>`
 })
 export class DataViewerComponent {
 

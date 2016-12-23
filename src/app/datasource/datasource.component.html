@@ -6,7 +6,7 @@
 <pre><code class="language-js"><![CDATA[  providers: [
     {
       provide: dataSource,
-      useClass: InternetDataSource,
+      useClass: {{dataSourceTypeName}},
       multi: true
     }
   ] ]]>
