@@ -11,8 +11,8 @@ export class SimpleDatePipe implements PipeTransform {
 
 @Component({
   template: `
-    <p>My birthday {{ data.birthday | simpleDate}}</p>
-    <p>Data as JSON string:</p><pre>{{ data | json}}</pre>
+    <p>My birthday <span class="label label-info">{{ data.birthday | simpleDate}}</span></p>
+    <p>Data as JSON string:</p><pre>{{ data | json | uppercase}}</pre>
   `,
 })
 export class PipesComponent {
