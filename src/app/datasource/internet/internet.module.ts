@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { InternetDataSource } from './internet.component';
-import { dataSource } from '../datasource/datasource.service';
+import { dataSource } from '../datasource.service';
 
 @NgModule({
   imports: [],

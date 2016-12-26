@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { DataSource } from '../datasource/datasource.service';
+import { DataSource } from '../datasource.service';
 
 @Injectable()
 export class InternetDataSource implements DataSource {
