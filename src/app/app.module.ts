@@ -6,11 +6,11 @@ import { AppRoutesModule } from './app.routes';
 
 import { AppComponent } from './app.component';
 
-import { ContentModule } from './content/content.module';
 import { DataSourceModule } from './datasource/datasource.module';
 import { RoutersComponent } from './routers/routers.component';
 import { PipesComponent, SimpleDatePipe } from './pipes/pipes.component';
 import { InternetModule } from './datasource/internet/internet.module';
+import { ContentModule } from './routers/content/content.module';
 
 @NgModule({
   imports: [
