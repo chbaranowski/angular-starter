@@ -10,7 +10,11 @@ let extractCSS = new ExtractTextPlugin('app.css');
 module.exports = {  
 
   entry: {
-    vendor: ['./src/app/vendor.ts'],  
+    vendor: [
+      'core-js',
+      'zone.js',
+      'reflect-metadata',
+    ],
     app: './src/app/main.ts'
   },
 
