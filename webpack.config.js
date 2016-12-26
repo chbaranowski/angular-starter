@@ -15,7 +15,10 @@ module.exports = {
       'zone.js',
       'reflect-metadata',
     ],
-    app: './src/app/main.ts'
+    app: [
+      './src/app/main.ts',
+      './src/styles/app.scss'
+    ]
   },
 
   output: {

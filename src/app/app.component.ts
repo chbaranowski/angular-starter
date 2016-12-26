@@ -1,6 +1,3 @@
-// Stylesheets
-require('../styles/app.scss');
-
 import { Component } from '@angular/core';
 
 @Component({
