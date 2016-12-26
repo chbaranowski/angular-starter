@@ -6,19 +6,12 @@ import { Router } from '@angular/router';
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.scss']
 })
-export class ContentComponent implements OnInit, OnDestroy {
+export class ContentComponent {
 
   private router: Router;
 
 	constructor($router: Router) {
 		this.router = $router;
 	}
-
-  ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void {
-    console.log('Content destroyed');
-  }
 
 }

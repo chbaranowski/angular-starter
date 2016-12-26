@@ -1,3 +1,4 @@
+import { PipesComponent } from './pipes/pipes.component';
 import { DataSourceComponent } from './datasource/datasource.component';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -26,6 +27,10 @@ const routes: Routes = [
   { 
     path: 'datasource',  
     component: DataSourceComponent, 
+  },
+  { 
+    path: 'pipes',  
+    component: PipesComponent, 
   },
 ];
 
