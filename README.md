@@ -1,6 +1,6 @@
 #Angular2 Example
 
-A Angular2 example based on webpack.
+A simple Angular2 example app based on webpack.
 
 ## Run the Example
 To start the Angular2 example invoke:

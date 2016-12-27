@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 
 import { DataSourceModule } from './datasource/datasource.module';
 import { RoutersComponent } from './routers/routers.component';
-import { PipesComponent, SimpleDatePipe } from './pipes/pipes.component';
+import { PipesComponent } from './pipes/pipes.component';
 import { InternetModule } from './datasource/internet/internet.module';
 import { ContentModule } from './routers/content/content.module';
 import { BindingModule } from './binding/binding.module';
