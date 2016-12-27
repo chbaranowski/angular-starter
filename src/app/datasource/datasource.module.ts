@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { DataSourceComponent } from './datasource.component';
 import { ChildDataViewerComponent, DataViewerComponent } from './dataviewer.component';
-import { TrainDataSource, CarDataSource, dataSource } from './datasource.service';
+import { TrainDataSource, CarDataSource, DATA_SOURCE } from './datasource.service';
 
 @NgModule({
   imports: [
@@ -21,12 +21,12 @@ import { TrainDataSource, CarDataSource, dataSource } from './datasource.service
   ],
   providers: [
     {
-      provide: dataSource,
+      provide: DATA_SOURCE,
       useClass: TrainDataSource,
       multi: true
     },
     {
-      provide: dataSource,
+      provide: DATA_SOURCE,
       useClass: CarDataSource,
       multi: true
     }

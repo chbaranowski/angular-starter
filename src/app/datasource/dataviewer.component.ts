@@ -2,7 +2,7 @@ import { Subscription } from 'rxjs/Rx';
 import { Subject } from 'rxjs/Subject';
 import { Component, Inject, Input, OnDestroy, OnInit, Injectable } from '@angular/core';
 
-import { DataSource, DataSourceService } from './datasource.service';
+import { DataSource, DataSourceService, DATA_SOURCE } from './datasource.service';
 
 
 @Component({
@@ -17,7 +17,7 @@ import { DataSource, DataSourceService } from './datasource.service';
 })
 export class DataViewerComponent {
 
-  constructor( @Inject('DataSource')
+  constructor( @Inject(DATA_SOURCE)
   private dataSourceInjected: DataSource[],
     private dataSourceService: DataSourceService) { }
 

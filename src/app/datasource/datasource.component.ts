@@ -1,6 +1,6 @@
 import { Component, Inject, Injector, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { DataSource, dataSource, DataSourceService } from './datasource.service';
+import { DataSource, DataSourceService, DATA_SOURCE } from './datasource.service';
 import { Subscription } from 'rxjs/Rx';
 
 @Component({
@@ -16,7 +16,8 @@ export class DataSourceComponent implements OnInit, OnDestroy {
   dataSourceChangeSubscription: Subscription
 
   constructor(
-    @Inject(dataSource) private dataSources: DataSource[],
+    @Inject(DATA_SOURCE) 
+    private dataSources: DataSource[],
     private dataSourceService: DataSourceService) {
       this.selectedDataSource = dataSources[0].name;
   }

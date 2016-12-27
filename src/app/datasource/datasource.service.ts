@@ -1,8 +1,9 @@
+import { OpaqueToken } from '@angular/core';
 import { Data } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Subject }    from 'rxjs/Subject';
 
-export const dataSource = 'DataSource'
+export let DATA_SOURCE = new OpaqueToken('app.service.datasource');
 
 // Example interface for a data source
 export interface DataSource {
