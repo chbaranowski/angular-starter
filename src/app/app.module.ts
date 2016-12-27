@@ -6,19 +6,19 @@ import { AppRoutesModule } from './app.routes';
 
 import { AppComponent } from './app.component';
 
-import { DataSourceModule } from './datasource/datasource.module';
 import { RoutersComponent } from './routers/routers.component';
 import { PipesComponent } from './pipes/pipes.component';
-import { InternetModule } from './datasource/internet/internet.module';
 import { ContentModule } from './routers/content/content.module';
 import { BindingModule } from './binding/binding.module';
+import { MultiProvidersModule } from './multiproviders/multiproviders.module';
+import { InternetModule } from './multiproviders/internet/internet.module';
 
 @NgModule({
   imports: [
     BrowserModule, 
     AppRoutesModule,
     ContentModule,
-    DataSourceModule,
+    MultiProvidersModule,
     InternetModule,
     PipesModule,
     BindingModule

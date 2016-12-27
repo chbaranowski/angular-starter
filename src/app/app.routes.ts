@@ -1,10 +1,10 @@
 import { BindingComponent } from './binding/binding.component';
 import { PipesComponent } from './pipes/pipes.component';
-import { DataSourceComponent } from './datasource/datasource.component';
 import { RouterModule, Routes } from '@angular/router';
 
 import { RoutersComponent } from './routers/routers.component';
 import { ContentModule } from './routers/content/content.module';
+import { DataSourceComponent } from './multiproviders/datasource.component';
 
 const routes: Routes = [
   { 

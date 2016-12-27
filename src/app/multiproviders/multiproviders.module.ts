@@ -9,7 +9,7 @@ import { TrainDataSource, CarDataSource, DATA_SOURCE } from './datasource.servic
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   exports: [
     DataSourceComponent
@@ -32,4 +32,4 @@ import { TrainDataSource, CarDataSource, DATA_SOURCE } from './datasource.servic
     }
   ],
 })
-export class DataSourceModule { }
+export class MultiProvidersModule { }
