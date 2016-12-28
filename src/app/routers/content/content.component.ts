@@ -3,8 +3,7 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'my-content',
-  templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss']
+  templateUrl: './content.component.html'
 })
 export class ContentComponent {
 

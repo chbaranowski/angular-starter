@@ -1,16 +1,16 @@
-import { CommonModule }  from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CommonModule }  from '@angular/common';
+import { RouterModule } from '@angular/router';
 
+import { contentRoutes } from './content.routes';
 import { ContentComponent } from './content.component';
-import { ContentRoutesModule } from './content.routes';
 import { TableComponent} from './table.component';
 import { ListComponent} from './list.component';
-
 
 @NgModule({
   imports: [
     CommonModule,
-    ContentRoutesModule
+    RouterModule.forChild(contentRoutes)
   ],
   declarations: [
     ContentComponent,
@@ -19,6 +19,7 @@ import { ListComponent} from './list.component';
   ], 
   exports: [
     ContentComponent,
+    RouterModule
   ]
 })
 export class ContentModule {

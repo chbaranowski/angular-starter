@@ -1,15 +1,20 @@
 import { NgModule } from '@angular/core';
-import { BindingComponent } from './binding.component';
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+
+import { BindingComponent } from './binding.component';
+import { bindingRoutes } from './binding.routes';
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forChild(bindingRoutes)
   ],
   exports: [
-    BindingComponent
+    BindingComponent,
+    RouterModule
   ],
   declarations: [
     BindingComponent

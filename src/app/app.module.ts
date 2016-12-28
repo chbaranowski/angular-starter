@@ -1,31 +1,27 @@
-import { PipesModule } from './pipes/pipes.module';
+import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
-import { NgModule, ClassProvider, Injectable } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutesModule } from './app.routes';
-
-import { AppComponent } from './app.component';
-
-import { RoutersComponent } from './routers/routers.component';
-import { PipesComponent } from './pipes/pipes.component';
-import { ContentModule } from './routers/content/content.module';
+import { PipesModule } from './pipes/pipes.module';
 import { BindingModule } from './binding/binding.module';
 import { MultiProvidersModule } from './multiproviders/multiproviders.module';
 import { InternetModule } from './multiproviders/internet/internet.module';
+import { RoutersModule } from './routers/routers.module';
+
+import { AppComponent } from './app.component';
+import { appRoutes } from './app.routes';
 
 @NgModule({
   imports: [
     BrowserModule, 
-    AppRoutesModule,
-    ContentModule,
+    BindingModule,
     MultiProvidersModule,
-    InternetModule,
     PipesModule,
-    BindingModule
+    RoutersModule,
+    RouterModule.forRoot(appRoutes)
   ], 
   declarations: [
-    AppComponent, 
-    RoutersComponent
+    AppComponent
   ], 
   providers: [], 
   bootstrap: [AppComponent]

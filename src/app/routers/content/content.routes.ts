@@ -1,10 +1,8 @@
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 import { ListComponent } from './list.component';
 import { TableComponent } from './table.component';
 
-const ContentRoutes: Routes = [
+export const contentRoutes: Routes = [
   { path: 'list',   component: ListComponent },
   { path: 'table',  component: TableComponent },
 ];
-
-export const ContentRoutesModule = RouterModule.forChild(ContentRoutes);
