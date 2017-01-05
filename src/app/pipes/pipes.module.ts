@@ -17,7 +17,7 @@ import { pipesRoutes } from './pipes.routes';
   declarations: [
     PipesComponent, 
     SimpleDatePipe
-  ],
+],
   providers: [],
 })
 export class PipesModule { }

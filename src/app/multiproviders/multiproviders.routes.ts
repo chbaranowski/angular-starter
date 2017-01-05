@@ -4,7 +4,7 @@ import { DataSourceComponent } from './datasource.component';
 
 export const multiProvidersRoutes: Routes = [
   <MenuRoute> { 
-    path: 'datasource',  
+    path: 'multiproviders',  
     component: DataSourceComponent, 
     nav: true
   },

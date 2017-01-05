@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule }  from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { contentRoutes } from './content.routes';
-import { ContentComponent } from './content.component';
 import { TableComponent} from './table.component';
-import { ListComponent} from './list.component';
+import { ListComponent } from './list.component';
+import { ContentChildComponent } from './contentchild.component';
+import { ContentNamedComponent } from './contentnamed.component';
 
 @NgModule({
   imports: [
@@ -13,13 +15,17 @@ import { ListComponent} from './list.component';
     RouterModule.forChild(contentRoutes)
   ],
   declarations: [
-    ContentComponent,
     TableComponent,
-    ListComponent
-  ], 
+    ListComponent,
+    ContentChildComponent,
+    ContentNamedComponent,
+], 
   exports: [
-    ContentComponent,
+    ContentChildComponent,
+    ContentNamedComponent,
     RouterModule
+  ],
+  providers:[
   ]
 })
 export class ContentModule {

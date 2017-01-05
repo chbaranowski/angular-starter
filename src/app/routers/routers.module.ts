@@ -1,21 +1,29 @@
+import { NamesService } from './names.service';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
+import { ChildRoutersComponent, NamedRoutersComponent } from './routers.component';
 import { ContentModule } from './content/content.module';
-import { RoutersComponent } from './routers.component';
 import { routersRoutes } from './routers.routes';
+import { NamesEditComponent } from './names.edit.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     ContentModule,
-    RouterModule.forChild(routersRoutes)
+    FormsModule,
+    RouterModule.forChild(routersRoutes),
   ],
   exports: [
-    RouterModule
+    RouterModule,
   ],
   declarations: [
-    RoutersComponent
+    ChildRoutersComponent,
+    NamedRoutersComponent,
+    NamesEditComponent
   ],
-  providers: [],
+  providers: [
+    NamesService,
+  ],
 })
 export class RoutersModule { }

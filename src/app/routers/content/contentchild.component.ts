@@ -2,10 +2,10 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'my-content',
-  templateUrl: './content.component.html'
+  selector: 'content-child-routes',
+  templateUrl: './contentchild.component.html'
 })
-export class ContentComponent {
+export class ContentChildComponent {
 
   private router: Router;
 

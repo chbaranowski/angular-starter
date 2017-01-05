@@ -1,3 +1,5 @@
+import { CarouselModule } from './carousel/carousel.module';
+import { ActionService } from './action.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
@@ -16,14 +18,18 @@ import { appRoutes } from './app.routes';
     BrowserModule, 
     BindingModule,
     MultiProvidersModule,
+    InternetModule,
     PipesModule,
     RoutersModule,
+    CarouselModule,
     RouterModule.forRoot(appRoutes)
   ], 
   declarations: [
     AppComponent
   ], 
-  providers: [], 
+  providers: [
+    ActionService
+  ], 
   bootstrap: [AppComponent]
 })
 export class AppModule {

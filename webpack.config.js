@@ -5,15 +5,13 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var webpack = require("webpack");
 
-let extractCSS = new ExtractTextPlugin('app.css');
-
 module.exports = {  
 
   entry: {
     vendor: [
       'core-js',
       'zone.js',
-      'reflect-metadata',
+      'reflect-metadata'
     ],
     app: [
       './src/app/main.ts',
@@ -27,7 +25,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+    extensions: ['', '.ts', '.js', '.css', '.scss', '.html']
   },
 
   module: {
@@ -37,24 +35,28 @@ module.exports = {
           loaders: ['awesome-typescript-loader', 'angular2-template-loader?keepUrl=true'] 
       },
       {   
-          test: /\.(html|css)$/, 
-          loader: 'raw',  
+          test: /\.html$/,
+          loader: 'html',  
       },
+
       // loader config for global css files
       {
           test: /\.scss$/,
           exclude: [path.resolve('node_modules'), path.resolve('src', 'app')],
-          loader: extractCSS.extract('style-loader', 'raw!postcss!sass'),
+          loader: ExtractTextPlugin.extract('style', 'css?sourceMap!postcss!sass'),
       },
+
       // loader config for angular component styles 
       {   
           test: /\.scss$/, 
           exclude: [path.resolve('node_modules'), path.resolve('src', 'styles')],
-          loader: 'raw!postcss!sass'
+          loaders: ['exports-loader?module.exports.toString()', 'css', 'postcss', 'sass']
       },
+      
+      // copy those assets to output
       {
-          test: /\.woff2?$|\.ttf$|\.eot$|\.svg$/,
-          loader: "file"
+        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file?name=assets/[name].[hash].[ext]?'
       },
     ]
   },
@@ -64,7 +66,7 @@ module.exports = {
       template: 'src/app/index.html',
       hash: true,
     }),
-    extractCSS
+    new ExtractTextPlugin('[name].[hash].css')
   ],
 
   devtool: 'source-map',
