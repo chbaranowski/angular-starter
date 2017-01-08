@@ -1,11 +1,37 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "mixins";
+@import "components";
 
-.show-grid {
-  border: 1px solid;
+#app {
+
+  @extend .container;
+
+  #header {
+    @extend .row;
+    @extend .box-bordered;
+  }
+
+  #footer {
+    @extend .row;
+    @extend .box-bordered;
+  }
+
+  #content {
+    @extend .row;
+    @extend .box-bordered;
+    padding: 10px 10px 10px 10px;
+    
+    #content-nav {
+      @extend .col-xs-4; 
+      @extend .col-sm-4; 
+      @extend .col-md-4;
+    }
+    
+    #content-body {
+      @extend .col-xs-8;
+      @extend .col-sm-8; 
+      @extend .col-md-8;
+    }
+  }
 }
-
-.content {
-  margin: 10px 10px 0px 0px;
-}
-

@@ -9,6 +9,7 @@ import { BindingModule } from './binding/binding.module';
 import { MultiProvidersModule } from './multiproviders/multiproviders.module';
 import { InternetModule } from './multiproviders/internet/internet.module';
 import { RoutersModule } from './routers/routers.module';
+import { CoreComponentsModule } from './core/core.components.module';
 
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
@@ -22,6 +23,7 @@ import { appRoutes } from './app.routes';
     PipesModule,
     RoutersModule,
     CarouselModule,
+    CoreComponentsModule,
     RouterModule.forRoot(appRoutes)
   ], 
   declarations: [

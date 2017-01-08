@@ -17,4 +17,8 @@ export class NamesService {
     this.data[index] = data;
   }
 
+  delete(index: number) {
+    this.data.splice(index, 1);
+  }
+
 }

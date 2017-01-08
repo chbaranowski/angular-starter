@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  template: `
-  <h2>Animations Example</h2>
-  <carousel [images]="images"></carousel>
-  `
+  templateUrl: 'carousel.example.component.html'
 })
 export class CarouselExampleComponent {
 

@@ -14,7 +14,7 @@ export class TableComponent implements OnInit {
     private actionService: ActionService
   ) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.namesService.get().then(data => {
       this.data = data;
     });
@@ -22,6 +22,10 @@ export class TableComponent implements OnInit {
 
   onEdit(index: number) {
     this.actionService.editName(index);
+  }
+
+  onDelete(index: number) {
+    this.namesService.delete(index);
   }
 
 }
