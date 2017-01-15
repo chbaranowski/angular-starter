@@ -5,17 +5,6 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var webpack = require("webpack");
 
-function createConfiguration() {
-  if(process.env.CONFIG_PROFILE) {
-    return JSON.stringify(
-      Object.assign(  
-        require('./configuration/config.json'), 
-        require('./configuration/config-' +process.env.CONFIG_PROFILE +'.json')));
-  } else {
-    return JSON.stringify(require('./configuration/config.json'));
-  }
-}
-
 module.exports = {  
 
   entry: {
@@ -37,10 +26,6 @@ module.exports = {
 
   resolve: {
     extensions: ['', '.ts', '.js', '.css', '.scss', '.html', 'json']
-  },
-
-  externals: {
-    'app.configuration': createConfiguration()
   },
 
   module: {
