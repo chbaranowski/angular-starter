@@ -9,7 +9,7 @@
     "start:prod": "CONFIG_PROFILE=prod npm run start",
     "build": "rimraf dist && webpack --progress --profile --bail",
     "build:local": "CONFIG_PROFILE=local npm run build",
-    "build:prod": "CONFIG_PROFILE=prod npm run build",
+    "build:prod": "BUILD_MODE=production CONFIG_PROFILE=prod npm run build",
     "docs": "rimraf documentation && ./node_modules/.bin/compodoc -p tsconfig.json"
   },
   "author": "Christian Baranowski",

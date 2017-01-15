@@ -21,7 +21,7 @@ module.exports = {
 
   output: {
     path: 'dist',
-    filename: '[name].js',
+    filename: '[name].[hash].js',
   },
 
   resolve: {
@@ -74,7 +74,8 @@ module.exports = {
     }),
     new ExtractTextPlugin('[name].[hash].css'),
     new webpack.EnvironmentPlugin([
-      'CONFIG_PROFILE'
+      'CONFIG_PROFILE',
+      'BUILD_MODE'
     ])
   ],
 
