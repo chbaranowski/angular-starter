@@ -1,11 +1,10 @@
-import { Routes } from '@angular/router';
-import { MenuRoute } from '../app.routes';
+import { MenuRoutes } from '../app.routes';
 import { CarouselExampleComponent } from './carousel.example.component';
 
-export const carouselRoutes: Routes = [
-  <MenuRoute> { 
+export const carouselRoutes: MenuRoutes = [
+  { 
     path: 'carousel',  
     component: CarouselExampleComponent, 
     nav: true
-  },
+  }
 ];

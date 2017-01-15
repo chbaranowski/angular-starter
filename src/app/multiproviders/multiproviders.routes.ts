@@ -1,11 +1,10 @@
-import { Routes } from '@angular/router';
-import { MenuRoute } from '../app.routes';
+import { MenuRoutes } from '../app.routes';
 import { DataSourceComponent } from './datasource.component';
 
-export const multiProvidersRoutes: Routes = [
-  <MenuRoute> { 
+export const multiProvidersRoutes: MenuRoutes = [
+  { 
     path: 'multiproviders',  
     component: DataSourceComponent, 
     nav: true
-  },
+  }
 ];

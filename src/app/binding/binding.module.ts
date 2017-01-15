@@ -1,3 +1,4 @@
+import { HighlightComponent } from './highlight.directive';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,7 +18,8 @@ import { bindingRoutes } from './binding.routes';
     RouterModule
   ],
   declarations: [
-    BindingComponent
+    BindingComponent,
+    HighlightComponent
   ],
   providers: [],
 })

@@ -1,3 +1,5 @@
+import { Configuration, createConfiguration } from './config/configuration.service';
+import { GridModule } from './grid/grid.module';
 import { CarouselModule } from './carousel/carousel.module';
 import { ActionService } from './action.service';
 import { NgModule } from '@angular/core';
@@ -13,6 +15,7 @@ import { CoreComponentsModule } from './core/core.components.module';
 
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
+import { ConfigurationComponent } from './config/configuration.component';
 
 @NgModule({
   imports: [
@@ -24,13 +27,16 @@ import { appRoutes } from './app.routes';
     RoutersModule,
     CarouselModule,
     CoreComponentsModule,
+    GridModule,
     RouterModule.forRoot(appRoutes)
   ], 
   declarations: [
-    AppComponent
+    AppComponent,
+    ConfigurationComponent
   ], 
   providers: [
-    ActionService
+    ActionService,
+    { provide: Configuration, useFactory: createConfiguration(), deps:[]}
   ], 
   bootstrap: [AppComponent]
 })

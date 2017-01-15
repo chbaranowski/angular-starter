@@ -5,6 +5,17 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 var webpack = require("webpack");
 
+function createConfiguration() {
+  if(process.env.CONFIG_PROFILE) {
+    return JSON.stringify(
+      Object.assign(  
+        require('./configuration/config.json'), 
+        require('./configuration/config-' +process.env.CONFIG_PROFILE +'.json')));
+  } else {
+    return JSON.stringify(require('./configuration/config.json'));
+  }
+}
+
 module.exports = {  
 
   entry: {
@@ -25,7 +36,11 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.ts', '.js', '.css', '.scss', '.html']
+    extensions: ['', '.ts', '.js', '.css', '.scss', '.html', 'json']
+  },
+
+  externals: {
+    'app.configuration': createConfiguration()
   },
 
   module: {
@@ -37,6 +52,12 @@ module.exports = {
       {   
           test: /\.html$/,
           loader: 'html',  
+      },
+
+      // JSON Loader
+      {   
+          test: /\.json$/,
+          loader: 'json-loader',  
       },
 
       // loader config for global css files
@@ -66,7 +87,10 @@ module.exports = {
       template: 'src/app/index.html',
       hash: true,
     }),
-    new ExtractTextPlugin('[name].[hash].css')
+    new ExtractTextPlugin('[name].[hash].css'),
+    new webpack.EnvironmentPlugin([
+      'CONFIG_PROFILE'
+    ])
   ],
 
   devtool: 'source-map',

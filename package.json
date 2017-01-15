@@ -5,7 +5,12 @@
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --inline --port 8080",
-    "build": "rimraf dist && webpack --progress --profile --bail"
+    "start:local": "CONFIG_PROFILE=local npm run start",
+    "start:prod": "CONFIG_PROFILE=prod npm run start",
+    "build": "rimraf dist && webpack --progress --profile --bail",
+    "build:local": "CONFIG_PROFILE=local npm run build",
+    "build:prod": "CONFIG_PROFILE=prod npm run build",
+    "docs": "rimraf documentation && ./node_modules/.bin/compodoc -p tsconfig.json"
   },
   "author": "Christian Baranowski",
   "license": "ISC",
@@ -14,12 +19,14 @@
     "angular2-template-loader": "^0.6.0",
     "awesome-typescript-loader": "^3.0.0-beta.17",
     "bootstrap-sass": "^3.3.7",
+    "compodoc": "0.0.32",
     "css-loader": "^0.25.0",
     "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.26.0",
+    "json-loader": "^0.5.4",
     "node-sass": "^4.1.1",
     "postcss-loader": "^1.2.1",
     "raw-loader": "^0.5.1",

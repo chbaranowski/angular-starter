@@ -5,7 +5,7 @@ import { TableComponent } from './table.component';
 export const contentRoutes: Routes = [
   {
     path: 'list',
-    component: ListComponent,
+    component: ListComponent
   },
   {
     path: 'table',
@@ -20,5 +20,5 @@ export const contentRoutes: Routes = [
     path: 'table',
     component: TableComponent,
     outlet: 'content'
-  },
+  }
 ];

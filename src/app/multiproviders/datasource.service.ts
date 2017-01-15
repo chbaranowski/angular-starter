@@ -5,7 +5,9 @@ import { Subject }    from 'rxjs/Subject';
 
 export let DATA_SOURCE = new OpaqueToken('app.service.datasource');
 
-// Example interface for a data source
+/**
+ * Example interface for a data source
+ */
 export interface DataSource {
 
   readonly name : string;
@@ -14,7 +16,9 @@ export interface DataSource {
 
 }
 
-// Example data source for cars
+/**
+ * Example data source for cars
+ */
 @Injectable()
 export class CarDataSource implements DataSource {
 

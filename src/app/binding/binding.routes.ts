@@ -1,11 +1,10 @@
-import { Routes } from '@angular/router';
-import { MenuRoute } from '../app.routes';
+import { MenuRoutes } from '../app.routes';
 import { BindingComponent } from './binding.component';
 
-export const bindingRoutes: Routes = [
-  <MenuRoute> { 
+export const bindingRoutes: MenuRoutes = [
+  { 
     path: 'binding',  
     component: BindingComponent, 
     nav: true
-  },
+  }
 ];
