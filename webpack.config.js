@@ -2,6 +2,7 @@ var path = require('path');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var StyleLintPlugin = require('stylelint-webpack-plugin');
 
 var webpack = require("webpack");
 
@@ -84,7 +85,8 @@ module.exports = {
     new webpack.EnvironmentPlugin([
       'CONFIG_PROFILE',
       'BUILD_MODE'
-    ])
+    ]),
+    new StyleLintPlugin({}),
   ],
 
   devtool: 'source-map',

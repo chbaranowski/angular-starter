@@ -1,52 +1,61 @@
+
 /* box with dotted border */
+
 .box-bordered {
   border: dotted 1px;
-  margin: 5px 0px 5px 0px;
+  margin: 5px 0 5px 0;
 
   .box-dummy-content {
+    line-height: 100px;
     min-height: 100px;
     text-align: center;
     vertical-align: middle;
-    line-height: 100px;
   }
 }
 
 /* tab panel atom */
+
 .tab-panel {
+
   .panel-header {
     @extend .row;
+
     ul {
       @extend .nav;
       @extend .nav-tabs;
     }
   }
+
   .panel-body {
-    @extend .row; 
+    @extend .row;
     padding-top: 1em;
   }
 }
 
 /* Form styles for input validation */
+
 form {
 
-  input.ng-valid  {
-    border-left: 5px solid #42A948; /* green */
+  input.ng-valid {
+    border-left: 5px solid #42a948; /* green */
   }
 
-  input.ng-invalid  {
+  input.ng-invalid {
     border-left: 5px solid #a94442; /* red */
   }
 
 }
 
 /* progress lane e.g. for copy files */
+
 .item-progress-lane {
   @include progress-lane(
     $size: 4em,
-    $font-icon: '.glyphicon-home')
+    $font-icon: '.glyphicon-home');
 }
 
 /* table with a action column with CRUD buttons */
+
 table.dynamic-content-table {
   @extend .table;
   
@@ -54,32 +63,32 @@ table.dynamic-content-table {
   $firstColumnWidth:  2em;
   $lastColumnWidth:   8em;
 
-  width:$tableWidth;
-  border-collapse:collapse;
-  table-layout:fixed;
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: $tableWidth;
 
   td:nth-child(1) {
-    width:$firstColumnWidth;
+    width: $firstColumnWidth;
   }
 
   td:nth-child(2) {
-    width:$tableWidth;
+    width: $tableWidth;
   }
 
   td:nth-child(3) {
-    width:$lastColumnWidth;
+    width: $lastColumnWidth;
   }
 
   th:nth-child(1) {
-    width:$firstColumnWidth;
+    width: $firstColumnWidth;
   }
 
   th:nth-child(2) {
-    width:$tableWidth;
+    width: $tableWidth;
   }
 
   th:nth-child(3) {
-    width:$lastColumnWidth;
+    width: $lastColumnWidth;
   }
 }
 
@@ -93,17 +102,17 @@ $breakpoint-med: 45em; // 720px
 $breakpoint-large: 60em; // 960px
 
 .grid {
-  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 
   @media only screen and (min-width: $breakpoint-small) {
     width: 80%;
   }
 
   @media only screen and (min-width: $breakpoint-large) {
-    width: 75%;
     max-width: 60rem;
+    width: 75%;
   }
 
   .row {
@@ -111,15 +120,15 @@ $breakpoint-large: 60em; // 960px
     width: 100%;
   }
 
-  .row [class^="col"] {
+  .row [class^='col'] {
     float: left;
     margin: 0;
   }
 
   .row::after {
-    content: "";
-    display: table;
     clear: both;
+    content: '';
+    display: table;
   }
 
   .col-1,
@@ -137,7 +146,7 @@ $breakpoint-large: 60em; // 960px
     background: #ccc;
   }
 
-  .col-1-sm { width:($width / 12) - ($gutter * 11 / 12); }
+  .col-1-sm { width: ($width / 12) - ($gutter * 11 / 12); }
   .col-2-sm { width: ($width / 6) - ($gutter * 10 / 12); }
   .col-3-sm { width: ($width / 4) - ($gutter * 9 / 12); }
   .col-4-sm { width: ($width / 3) - ($gutter * 8 / 12); }
@@ -151,7 +160,7 @@ $breakpoint-large: 60em; // 960px
   .col-12-sm { width: $width; }
 
   @media only screen and (min-width: $breakpoint-med) {
-    .col-1 { width:($width / 12) - ($gutter * 11 / 12); }
+    .col-1 { width: ($width / 12) - ($gutter * 11 / 12); }
     .col-2 { width: ($width / 6) - ($gutter * 10 / 12); }
     .col-3 { width: ($width / 4) - ($gutter * 9 / 12); }
     .col-4 { width: ($width / 3) - ($gutter * 8 / 12); }
@@ -167,5 +176,6 @@ $breakpoint-large: 60em; // 960px
     .hidden-sm {
       display: block;
     }
+
   }
 }

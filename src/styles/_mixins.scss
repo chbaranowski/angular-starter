@@ -1,28 +1,32 @@
 @mixin progress-lane($size, $font-icon: '.glyphicon-file', $font-class: '.glyphicon') {
-  
+
   margin-right: $size;
 
   @keyframes slidein {
+
     from {
       margin-left: 0%;
     }
+
     to {
       margin-left: 100%;
     }
+
   }
 
   .item {
     @extend #{$font-class};
     @extend #{$font-icon};
-    
-    width: $size;
-    height: $size;
-    font-size: $size;
 
     /* animation */
     animation-duration: 3s;
-    animation-name: slidein;
     animation-iteration-count: infinite;
+    animation-name: slidein;
+
+    font-size: $size;
+    height: $size;
+    width: $size;
+
   }
 
 }

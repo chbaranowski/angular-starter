@@ -1,4 +1,6 @@
 {
   "typescript.tsdk": "./node_modules/typescript/lib",
-  "npm-intellisense.scanDevDependencies": true
+  "npm-intellisense.scanDevDependencies": true,
+  "stylelint.enable": true,
+  "css.validate": false
 }
