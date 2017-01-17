@@ -1,7 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, Route } from '@angular/router';
-
-import { MenuRoute } from './app.routes';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',

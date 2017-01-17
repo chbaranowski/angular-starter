@@ -1,11 +1,11 @@
-import { Component, OnInit, Injectable } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActionService } from '../../action.service';
 import { NamesService } from '../names.service';
 
 @Component({
   templateUrl: './table.component.html',
 })
-export class TableComponent implements OnInit {  
+export class TableComponent implements OnInit {
 
   private data: string[];
 

@@ -1,6 +1,5 @@
 import { Subscription } from 'rxjs/Rx';
-import { Subject } from 'rxjs/Subject';
-import { Component, Inject, Input, OnDestroy, OnInit, Injectable } from '@angular/core';
+import { Component, Inject, Input, OnDestroy, OnInit } from '@angular/core';
 
 import { DataSource, DataSourceService, DATA_SOURCE } from './datasource.service';
 
@@ -22,8 +21,8 @@ export class DataViewerComponent {
     private dataSourceService: DataSourceService) { }
 
   @Input('dataSource') set dataSourceName(dataSourceName: string) {
-    var dataSource = this.dataSourceInjected
-      .find(dataSource => dataSource.name === dataSourceName)
+    let dataSource = this.dataSourceInjected
+      .find(dataSource => dataSource.name === dataSourceName);
     if (!dataSource) {
       throw new Error(`No data source service configured for name ${this.dataSourceName}`);
     }

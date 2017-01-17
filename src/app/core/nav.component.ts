@@ -16,8 +16,8 @@ import { MenuRoute } from '../app.routes';
   `
 })
 export class NavComponent implements OnInit {
-  
-  navItems: Route[]
+
+  navItems: Route[];
 
   constructor(private router: Router) {}
 

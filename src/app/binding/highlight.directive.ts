@@ -1,4 +1,3 @@
-import { Title } from '@angular/platform-browser';
 import { Directive, ElementRef, Input, OnInit } from '@angular/core';
 
 @Directive({

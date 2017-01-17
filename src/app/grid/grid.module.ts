@@ -5,10 +5,10 @@ import { GridComponent } from './grid.component';
 import { gridRoutes } from './grid.routes';
 
 @NgModule({
-  imports: [ 
+  imports: [
     RouterModule.forChild(gridRoutes)
   ],
-  exports: [ 
+  exports: [
     RouterModule
   ],
   declarations: [

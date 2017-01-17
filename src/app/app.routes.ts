@@ -1,4 +1,4 @@
-import { Routes, Route } from '@angular/router';
+import { Route } from '@angular/router';
 import { ConfigurationComponent } from './config/configuration.component';
 
 /**

@@ -1,7 +1,6 @@
 import { OpaqueToken } from '@angular/core';
-import { Data } from '@angular/router';
 import { Injectable } from '@angular/core';
-import { Subject }    from 'rxjs/Subject';
+import { Subject } from 'rxjs/Subject';
 
 export let DATA_SOURCE = new OpaqueToken('app.service.datasource');
 
@@ -10,9 +9,9 @@ export let DATA_SOURCE = new OpaqueToken('app.service.datasource');
  */
 export interface DataSource {
 
-  readonly name : string;
+  readonly name: string;
 
-  getData() : string[];
+  getData(): string[];
 
 }
 
@@ -30,24 +29,28 @@ export class CarDataSource implements DataSource {
 
 }
 
-// Example data source for trains
+/**
+ * Example data source for trains
+ */
 @Injectable()
 export class TrainDataSource implements DataSource {
 
   name = 'train';
 
   getData() {
-    return ['ICE', 'TCW']
+    return ['ICE', 'TCW'];
   }
 
 }
 
-// service to get a selected data source in a component and in the child components
+/**
+ * service to get a selected data source in a component and in the child components
+ */
 @Injectable()
 export class DataSourceService {
-  
+
   dataSource: DataSource;
-  
+
   private dataSourceSelectedSource = new Subject<DataSource>();
 
   dataSourceChanged$ = this.dataSourceSelectedSource.asObservable();

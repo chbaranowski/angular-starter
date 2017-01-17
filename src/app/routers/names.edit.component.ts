@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { NamesService } from './names.service';
 
@@ -24,9 +24,9 @@ export class NamesEditComponent implements OnInit {
   ngOnInit() {
     this.route.params
       // returns the selected element by the index
-      .switchMap(params => { 
+      .switchMap(params => {
         this.index = +params['index'];
-        return this.service.getByIndex(this.index)
+        return this.service.getByIndex(this.index);
       })
       // subscribe for the selected name
       .subscribe(selectedName => this.selectedName = selectedName);

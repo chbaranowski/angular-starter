@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class BindingComponent {
 
-  data = { 
+  data = {
     lastname: 'Baranowski',
     counterValue: 0,
     pos: {
@@ -14,7 +14,7 @@ export class BindingComponent {
       y: 0
     },
     text: ''
-  }
+  };
 
   get counter() {
     return this.data.counterValue;
@@ -38,7 +38,7 @@ export class BindingComponent {
   }
 
   keyup(event: KeyboardEvent) {
-    this.data.text += event.key
+    this.data.text += event.key;
   }
 
 }

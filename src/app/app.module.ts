@@ -19,7 +19,7 @@ import { ConfigurationComponent } from './config/configuration.component';
 
 @NgModule({
   imports: [
-    BrowserModule, 
+    BrowserModule,
     BindingModule,
     MultiProvidersModule,
     InternetModule,
@@ -29,15 +29,15 @@ import { ConfigurationComponent } from './config/configuration.component';
     CoreComponentsModule,
     GridModule,
     RouterModule.forRoot(appRoutes)
-  ], 
+  ],
   declarations: [
     AppComponent,
     ConfigurationComponent
-  ], 
+  ],
   providers: [
     ActionService,
-    { provide: Configuration, useFactory: createConfiguration(), deps:[]}
-  ], 
+    { provide: Configuration, useFactory: createConfiguration(), deps: []}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

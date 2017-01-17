@@ -1,5 +1,4 @@
-import { Component, Inject, Injector, OnDestroy, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { DataSource, DataSourceService, DATA_SOURCE } from './datasource.service';
 import { Subscription } from 'rxjs/Rx';
 
@@ -9,14 +8,14 @@ import { Subscription } from 'rxjs/Rx';
 })
 export class DataSourceComponent implements OnInit, OnDestroy {
 
-  selectedDataSource: string
+  selectedDataSource: string;
 
-  dataSourceTypeName: string
+  dataSourceTypeName: string;
 
-  dataSourceChangeSubscription: Subscription
+  dataSourceChangeSubscription: Subscription;
 
   constructor(
-    @Inject(DATA_SOURCE) 
+    @Inject(DATA_SOURCE)
     private dataSources: DataSource[],
     private dataSourceService: DataSourceService) {
       this.selectedDataSource = dataSources[0].name;
@@ -24,7 +23,7 @@ export class DataSourceComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.dataSourceChangeSubscription = this.dataSourceService.dataSourceChanged$.subscribe((dataSource) => {
-      this.dataSourceTypeName = dataSource.constructor.name
+      this.dataSourceTypeName = dataSource.constructor.name;
     });
   }
 

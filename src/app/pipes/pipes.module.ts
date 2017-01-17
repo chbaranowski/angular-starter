@@ -15,7 +15,7 @@ import { pipesRoutes } from './pipes.routes';
     RouterModule
   ],
   declarations: [
-    PipesComponent, 
+    PipesComponent,
     SimpleDatePipe
 ],
   providers: [],

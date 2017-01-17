@@ -9,15 +9,15 @@ import { Injectable } from '@angular/core';
  */
 @Injectable()
 export class Configuration {
-  
+
   /** The base URL for the backend calls (default is empty). */
-  baseUrl = ""
+  baseUrl = '';
 
   /** Some boolean example config property (default is false). */
-  enableResources = false
+  enableResources = false;
 
   /** Some number config example property (default is 42). */
-  someNumber = 42
+  someNumber = 42;
 
   constructor(
     /** The configuration profile defined by enviorment variable with the name CONFIG_PROFILE. */

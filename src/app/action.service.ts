@@ -6,7 +6,7 @@ export class ActionService {
 
   constructor(
     private router: Router
-  ){}
+  ) {}
 
   editName(index: number) {
     this.router.navigate(['/names', index]);

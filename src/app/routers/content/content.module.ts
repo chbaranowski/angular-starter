@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule }  from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 
 import { contentRoutes } from './content.routes';
 import { TableComponent} from './table.component';
@@ -19,13 +18,13 @@ import { ContentNamedComponent } from './contentnamed.component';
     ListComponent,
     ContentChildComponent,
     ContentNamedComponent,
-], 
+],
   exports: [
     ContentChildComponent,
     ContentNamedComponent,
     RouterModule
   ],
-  providers:[
+  providers: [
   ]
 })
 export class ContentModule {

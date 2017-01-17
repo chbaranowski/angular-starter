@@ -1,4 +1,4 @@
-import { Component, OnInit, transition, animate, trigger, state, style, keyframes, Input } from '@angular/core';
+import { Component, transition, animate, trigger, state, style, Input } from '@angular/core';
 
 @Component({
   selector: 'carousel',
@@ -19,29 +19,29 @@ import { Component, OnInit, transition, animate, trigger, state, style, keyframe
 })
 export class CarouselComponent {
 
-  /*
-   Example:
-   images = [
-    { url: require('./../../images/emilycampbell.jpg').toString() },
-    { url: require('./../../images/kai-oberhauser.jpg').toString() },
-    { url: require('./../../images/maxheaaauki-vincent-guth.jpg').toString() },
-   ]
+  /**
+   * Example:
+   * images = [
+   *  { url: require('./../../images/emilycampbell.jpg').toString() },
+   *  { url: require('./../../images/kai-oberhauser.jpg').toString() },
+   *  { url: require('./../../images/maxheaaauki-vincent-guth.jpg').toString() },
+   * ]
   */
-  @Input() images: Image[]
+  @Input() images: Image[];
 
-  activeIndex = 0  
+  activeIndex = 0;
 
   next() {
-    this.activeIndex = (this.images.length + this.activeIndex +1) % this.images.length;
+    this.activeIndex = (this.images.length + this.activeIndex + 1) % this.images.length;
   }
 
   previous() {
-    this.activeIndex = (this.images.length + this.activeIndex -1) % this.images.length;
+    this.activeIndex = (this.images.length + this.activeIndex - 1) % this.images.length;
   }
 
 }
 
 export interface Image {
-  url: String,
-  title: String
+  url: String;
+  title: String;
 }

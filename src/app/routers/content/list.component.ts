@@ -4,7 +4,7 @@ import { NamesService } from '../names.service';
 @Component({
   templateUrl: './list.component.html'
 })
-export class ListComponent {   
+export class ListComponent {
 
   private data: string[];
 
@@ -17,5 +17,5 @@ export class ListComponent {
       this.data = data;
     });
   }
-  
+
 }
