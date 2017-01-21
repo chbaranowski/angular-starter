@@ -3,6 +3,10 @@ import { NamesEditComponent } from './names.edit.component';
 import { ContentModule } from './content/content.module';
 import { ChildRoutersComponent, NamedRoutersComponent } from './routers.component';
 
+export function loadContentModule() {
+  return ContentModule;
+}
+
 export const routersRoutes: MenuRoutes = [
   {
     path: '',
@@ -22,13 +26,13 @@ export const routersRoutes: MenuRoutes = [
   {
     path: 'childrouters',
     component: ChildRoutersComponent,
-    loadChildren: () => ContentModule,
+    loadChildren: loadContentModule,
     nav: true
   },
   {
     path: 'namedrouters',
     component: NamedRoutersComponent,
-    loadChildren: () => ContentModule,
+    loadChildren: loadContentModule,
     nav: true
   },
   {

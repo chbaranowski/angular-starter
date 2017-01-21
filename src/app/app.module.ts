@@ -16,9 +16,11 @@ import { CoreComponentsModule } from './core/core.components.module';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { ConfigurationComponent } from './config/configuration.component';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
+    HttpModule,
     BrowserModule,
     BindingModule,
     MultiProvidersModule,
@@ -36,7 +38,7 @@ import { ConfigurationComponent } from './config/configuration.component';
   ],
   providers: [
     ActionService,
-    { provide: Configuration, useFactory: createConfiguration(), deps: []}
+    { provide: Configuration, useFactory: createConfiguration, deps: []}
   ],
   bootstrap: [AppComponent]
 })

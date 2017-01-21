@@ -1,8 +1,11 @@
 var path = require('path');
 
+// plugins
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var StyleLintPlugin = require('stylelint-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+
 
 var webpack = require("webpack");
 
@@ -87,6 +90,9 @@ module.exports = {
       'BUILD_MODE'
     ]),
     new StyleLintPlugin({}),
+    new CopyWebpackPlugin([
+       {from: path.resolve('src', 'messages')},
+    ])
   ],
 
   devtool: 'source-map',

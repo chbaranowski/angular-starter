@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="d8fd4d853c293f3a834f4e25da13762713068bf0" datatype="html">
+        <source>
+          Header from (APP VIEW)
+        </source>
+        <target>
+          Beispiel Angular DE Header Box Inhalt.
+        </target>
+        <note priority="1" from="description">Header box default text</note>
+      </trans-unit>
+      <trans-unit id="1e44678e981366bce8d20f4f359b9e5f1e9eb891" datatype="html">
+        <source>
+      Footer (APP VIEW)
+    </source>
+        <target>
+          Beispiel Angular DE Footer Box Inhalt.
+        </target>
+        <note priority="1" from="description">Footer box default text.</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
