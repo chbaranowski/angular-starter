@@ -76,6 +76,12 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file?name=assets/[name].[hash].[ext]?'
       },
+
+      // i18n messages Loader
+      {   
+          test: /\.xlf$/,
+          loader: 'file',  
+      },
     ]
   },
 
@@ -90,9 +96,6 @@ module.exports = {
       'BUILD_MODE'
     ]),
     new StyleLintPlugin({}),
-    new CopyWebpackPlugin([
-       {from: path.resolve('src', 'messages')},
-    ])
   ],
 
   devtool: 'source-map',

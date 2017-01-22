@@ -1,0 +1,16 @@
+<h2>i18n Attributes</h2>
+<img [src]="emilycampbellImageUrl" 
+  i18n-title title="Example image title" 
+  i18n-alt alt="Example image alt text"
+  style="width: 100%">
+
+<h2>singular and plural</h2>
+
+<div class="form-group">
+    <label for="teamSize">Team Size:</label>
+    <input type="number" class="form-control" id="teamSize" [(ngModel)]="teamSize">
+</div>
+
+<span i18n="Display team size as text e.g. 'no team members', 'one team member'">
+  {teamSize, plural, =0 {no team members} =1 { {{teamSize}} team member} other {{{teamSize}} team members}}
+</span>

@@ -12,6 +12,7 @@ import { MultiProvidersModule } from './multiproviders/multiproviders.module';
 import { InternetModule } from './multiproviders/internet/internet.module';
 import { RoutersModule } from './routers/routers.module';
 import { CoreComponentsModule } from './core/core.components.module';
+import { I18NModule } from './internationalization/i18n.module';
 
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
@@ -30,6 +31,7 @@ import { HttpModule } from '@angular/http';
     CarouselModule,
     CoreComponentsModule,
     GridModule,
+    I18NModule,
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [

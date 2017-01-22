@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      
+      <trans-unit id="d8fd4d853c293f3a834f4e25da13762713068bf0" datatype="html">
+        <source>
+          Header from (APP VIEW)
+        </source>
+        <target>Beispiel Angular DE Header Box Inhalt.</target>
+        <note priority="1" from="description">Header box default text</note>
+      </trans-unit>
+      
+      <trans-unit id="1e44678e981366bce8d20f4f359b9e5f1e9eb891" datatype="html">
+        <source>
+          Footer (APP VIEW)
+        </source>
+        <target>Beispiel Angular DE Footer Box Inhalt.</target>
+        <note priority="1" from="description">Footer box default text.</note>
+      </trans-unit>
+      
+      <trans-unit id="66d485e552d31b8f2548f8019e41b8875bfb07ea" datatype="html">
+        <source>Example image title</source>
+        <target>Beispiel Titel für ein HTML Bild.</target>
+      </trans-unit>
+      
+      <trans-unit id="7363d622161043607063b5c1ba929ee158ebd25c" datatype="html">
+        <source>Example image alt text</source>
+        <target>Beispiel Alternativtext für ein HTML Bild.</target>
+      </trans-unit>
+
+      <trans-unit id="6858a116fc87148cb453aca7c081b5c243039ed1" datatype="html">
+        <source>
+          <x id="ICU"/>
+        </source>
+        <target>{teamSize, plural, =0 {Keine Teammitglieder} =1 {{{teamSize}} Teammitglied} other {{{teamSize}} Teammitglieder}}</target>
+        <note priority="1" from="description">Display team size as text e.g. &apos;no team members&apos;, &apos;one team member&apos;</note>
+      </trans-unit>
+
+    </body>
+  </file>
+</xliff>
