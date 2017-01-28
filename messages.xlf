@@ -16,6 +16,14 @@
         <target/>
         <note priority="1" from="description">Footer box default text.</note>
       </trans-unit>
+      <trans-unit id="df3cf8b55cb528cf8c00167e0b119bfb828538b5" datatype="html">
+        <source>
+I don&apos;t output any element either
+</source>
+        <target/>
+        <note priority="1" from="description">optional description</note>
+        <note priority="1" from="meaning">optional meaning</note>
+      </trans-unit>
       <trans-unit id="66d485e552d31b8f2548f8019e41b8875bfb07ea" datatype="html">
         <source>Example image title</source>
         <target/>
@@ -34,6 +42,12 @@
       <trans-unit id="e61a9763331d11ec01d42a82047f3d5e12a1e926" datatype="html">
         <source/>
         <target/>
+      </trans-unit>
+      <trans-unit id="6aa00a600718b174a3ec0c079877cc4163968a57" datatype="html">
+        <source/>
+        <target/>
+        <note priority="1" from="description"> e.g. {gender, select, m {male} f {female} other {unknown}</note>
+        <note priority="1" from="meaning">gender names </note>
       </trans-unit>
     </body>
   </file>

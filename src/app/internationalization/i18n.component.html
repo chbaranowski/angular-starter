@@ -1,16 +1,26 @@
+<h2>i18 text</h2>
+<!--i18n: optional meaning|optional description -->
+I don't output any element either
+<!--/i18n-->
+
 <h2>i18n Attributes</h2>
-<img [src]="emilycampbellImageUrl" 
-  i18n-title title="Example image title" 
-  i18n-alt alt="Example image alt text"
-  style="width: 100%">
+<img [src]="emilycampbellImageUrl" i18n-title title="Example image title" i18n-alt alt="Example image alt text" style="width: 100%">
 
 <h2>singular and plural</h2>
 
 <div class="form-group">
-    <label for="teamSize">Team Size:</label>
-    <input type="number" class="form-control" id="teamSize" [(ngModel)]="teamSize">
+  <label for="teamSize">Team Size:</label>
+  <input type="number" class="form-control" id="teamSize" [(ngModel)]="teamSize" min="0">
 </div>
 
 <span i18n="Display team size as text e.g. 'no team members', 'one team member'">
   {teamSize, plural, =0 {no team members} =1 { {{teamSize}} team member} other {{{teamSize}} team members}}
 </span>
+
+<h2>Select alternative texts</h2>
+
+<div class="form-group">
+  <label for="gender">Gender:</label>
+  <input type="text" class="form-control" id="gender" [(ngModel)]="gender">
+</div>
+<span i18n="gender names | e.g. {gender, select, m {male} f {female} other {unknown}">{gender, select, m {male} f {female} other {unknown}}</span>

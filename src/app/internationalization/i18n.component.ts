@@ -9,6 +9,8 @@ export class I18nComponent implements OnInit {
 
   teamSize = 0;
 
+  gender = '';
+
   constructor() { }
   ngOnInit() { }
 }

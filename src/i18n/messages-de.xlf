@@ -37,6 +37,20 @@
         <note priority="1" from="description">Display team size as text e.g. &apos;no team members&apos;, &apos;one team member&apos;</note>
       </trans-unit>
 
+      <trans-unit id="df3cf8b55cb528cf8c00167e0b119bfb828538b5" datatype="html">
+        <source>I don&apos;t output any element either</source>
+        <target>Test</target>
+        <note priority="1" from="description">optional description</note>
+        <note priority="1" from="meaning">optional meaning</note>
+      </trans-unit>
+
+      <trans-unit id="6aa00a600718b174a3ec0c079877cc4163968a57" datatype="html">
+        <source/>
+        <target>{gender, select, m {männlich} w {weiblich} other {unbekannt}}</target>
+        <note priority="1" from="description"> e.g. {gender, select, m {male} f {female} other {unknown}}</note>
+        <note priority="1" from="meaning">gender names </note>
+      </trans-unit>
+
     </body>
   </file>
 </xliff>
