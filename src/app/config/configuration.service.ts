@@ -30,21 +30,19 @@ export class Configuration {
  * Factory method for constructing the configuration. The config ist provided as angular service 
  * based on the enviorment and the JSON config.
  */
-export function createConfiguration(): any {
-  return (): Configuration => {
-    let config: Configuration;
-    let profile = process.env.CONFIG_PROFILE;
-    if (profile) {
-      config = Object.assign(
-        new Configuration(profile),
-        require('./../../../configuration/config.json'),
-        require('./../../../configuration/config-' + process.env.CONFIG_PROFILE + '.json')
-      );
-    } else {
-      config = Object.assign(
-        new Configuration(profile),
-        require('./../../../configuration/config.json'));
-    }
-    return config;
-  };
+export function createConfiguration(): Configuration {
+  let config: Configuration;
+  let profile = process.env.CONFIG_PROFILE;
+  if (profile) {
+    config = Object.assign(
+      new Configuration(profile),
+      require('./../../../configuration/config.json'),
+      require('./../../../configuration/config-' + process.env.CONFIG_PROFILE + '.json')
+    );
+  } else {
+    config = Object.assign(
+      new Configuration(profile),
+      require('./../../../configuration/config.json'));
+  }
+  return config;
 };
