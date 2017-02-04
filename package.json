@@ -7,9 +7,11 @@
     "start": "webpack-dev-server --inline --port 8080",
     "start:local": "cross-env BUILD_MODE=debug cross-env CONFIG_PROFILE=local npm run start",
     "start:prod": "cross-env BUILD_MODE=production cross-env CONFIG_PROFILE=prod npm run start",
+    
     "build": "rimraf dist && webpack --progress --profile --bail",
     "build:local": "cross-env BUILD_MODE=debug cross-env CONFIG_PROFILE=local npm run build",
     "build:prod": "cross-env BUILD_MODE=production cross-env CONFIG_PROFILE=prod npm run build",
+    
     "docs": "rimraf documentation && ./node_modules/.bin/compodoc -p tsconfig.json",
     "i18n": "ng-xi18n"
   },
