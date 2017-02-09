@@ -17,7 +17,14 @@ import { I18NModule } from './internationalization/i18n.module';
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 import { ConfigurationComponent } from './config/configuration.component';
-import { HttpModule } from '@angular/http';
+import { Http, HttpModule } from '@angular/http';
+
+import { TranslateModule, TranslateLoader } from 'ng2-translate';
+import { TranslatePoLoader } from '@biesbjerg/ng2-translate-po-loader';
+
+export function createTranslateLoader(http: Http) {
+    return new TranslatePoLoader(http, 'assets/i18n', '.po');
+}
 
 @NgModule({
   imports: [
@@ -32,6 +39,11 @@ import { HttpModule } from '@angular/http';
     CoreComponentsModule,
     GridModule,
     I18NModule,
+    TranslateModule.forRoot({
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [Http]
+    }),
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [

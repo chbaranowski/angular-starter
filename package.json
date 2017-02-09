@@ -7,19 +7,19 @@
     "start": "webpack-dev-server --inline --port 8080",
     "start:local": "cross-env BUILD_MODE=debug cross-env CONFIG_PROFILE=local npm run start",
     "start:prod": "cross-env BUILD_MODE=production cross-env CONFIG_PROFILE=prod npm run start",
-    
     "build": "rimraf dist && webpack --progress --profile --bail",
     "build:local": "cross-env BUILD_MODE=debug cross-env CONFIG_PROFILE=local npm run build",
     "build:prod": "cross-env BUILD_MODE=production cross-env CONFIG_PROFILE=prod npm run build",
-    
     "docs": "rimraf documentation && ./node_modules/.bin/compodoc -p tsconfig.json",
-    "i18n": "ng-xi18n"
+    "i18n": "ng2-translate-extract --dir ./src --output ./src/i18n --format=pot --clean"
+
   },
   "author": "Christian Baranowski",
   "license": "ISC",
   "devDependencies": {
     "@angular/compiler-cli": "^2.4.4",
     "@angular/platform-server": "^2.4.4",
+    "@biesbjerg/ng2-translate-extract": "^0.6.0",
     "@types/node": "^6.0.52",
     "angular2-template-loader": "^0.6.2",
     "awesome-typescript-loader": "^3.0.0-beta.18",
@@ -31,6 +31,7 @@
     "exports-loader": "^0.6.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.9.0",
+    "gettext-loader": "^0.2.2",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.26.0",
     "json-loader": "^0.5.4",
@@ -41,13 +42,13 @@
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "stylelint": "^7.7.1",
+    "stylelint-config-suitcss": "^8.0.0",
+    "stylelint-webpack-plugin": "^0.5.1",
     "tslint": "^4.3.1",
     "tslint-loader": "^3.3.0",
     "typescript": "^2.1.5",
     "webpack": "^1.14.0",
-    "webpack-dev-server": "^1.16.2",
-    "stylelint-config-suitcss": "^8.0.0",
-    "stylelint-webpack-plugin": "^0.5.1"
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "@angular/common": "^2.4.4",
@@ -58,7 +59,9 @@
     "@angular/platform-browser": "^2.4.4",
     "@angular/platform-browser-dynamic": "^2.4.4",
     "@angular/router": "^3.4.4",
+    "@biesbjerg/ng2-translate-po-loader": "^0.2.1",
     "core-js": "^2.4.1",
+    "ng2-translate": "^5.0.0",
     "reflect-metadata": "^0.1.9",
     "rxjs": "^5.0.3",
     "zone.js": "^0.7.6"

@@ -137,6 +137,10 @@ module.exports = function () {
     ]),
 
     new StyleLintPlugin({}),
+
+    new CopyWebpackPlugin([
+      { from: 'src/i18n', to: 'assets/i18n' },
+    ])
   ];
 
   /**
