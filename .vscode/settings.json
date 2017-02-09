@@ -2,5 +2,6 @@
   "typescript.tsdk": "./node_modules/typescript/lib",
   "npm-intellisense.scanDevDependencies": true,
   "stylelint.enable": true,
-  "css.validate": false
+  "css.validate": false,
+  "vsicons.presets.angular": true
 }
