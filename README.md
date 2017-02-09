@@ -12,3 +12,7 @@ To start the Angular2 example invoke:
 To build a documentation based on the source code comments invoke:
  * npm install
  * npm run docs
+
+ # i18n ngx-translate
+
+ https://github.com/ngx-translate/core
