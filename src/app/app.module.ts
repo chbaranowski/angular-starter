@@ -19,11 +19,11 @@ import { appRoutes } from './app.routes';
 import { ConfigurationComponent } from './config/configuration.component';
 import { Http, HttpModule } from '@angular/http';
 
-import { TranslateModule, TranslateLoader } from 'ng2-translate';
-import { TranslatePoLoader } from '@biesbjerg/ng2-translate-po-loader';
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from 'ng2-translate';
+import { TextComponent } from './text.component';
 
 export function createTranslateLoader(http: Http) {
-    return new TranslatePoLoader(http, 'assets/i18n', '.po');
+    return new TranslateStaticLoader(http, './assets/i18n', '.json');
 }
 
 @NgModule({
@@ -48,6 +48,7 @@ export function createTranslateLoader(http: Http) {
   ],
   declarations: [
     AppComponent,
+    TextComponent,
     ConfigurationComponent
   ],
   providers: [
