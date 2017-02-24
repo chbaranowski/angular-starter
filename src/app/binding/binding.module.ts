@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 
 import { BindingComponent } from './binding.component';
 import { bindingRoutes } from './binding.routes';
+import { SvgComponent } from './svg.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { bindingRoutes } from './binding.routes';
   ],
   declarations: [
     BindingComponent,
-    HighlightComponent
+    HighlightComponent,
+    SvgComponent,
   ],
   providers: [],
 })
