@@ -1,24 +1,43 @@
-<div id="app">
+<md-grid-list cols="4" rowHeight="100px">
+  <md-grid-tile colspan="3" rowspan="4">
 
-  <div id="header">
-    <div class="box-dummy-content" i18n="Header box default text.">
-      Header from (APP VIEW)
-    </div>
-  </div>
+    <md-card style="width: 90%; height: 80%;">
+      <md-card-header>
+        <md-card-title>Card Title 01</md-card-title>
+      </md-card-header>
+      <md-card-content>
+        <button md-button (click)="stopSpinner()">Click me!</button>
+      </md-card-content>
+    </md-card>
 
-  <div id="content">
-    <div id="content-nav">
-      <nav></nav>
-    </div>
-    <div id="content-body">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+  </md-grid-tile>
 
-  <div id="footer">
-    <div class="box-dummy-content" i18n="Footer box default text.">
-      Footer (APP VIEW)
-    </div>
-  </div>
+  <md-grid-tile colspan="1" rowspan="1">
+    <md-card style="width: 80%;">
+      nav-1
+    </md-card>
+  </md-grid-tile>
+  <md-grid-tile colspan="1" rowspan="1">
+    <md-card style="width: 80%;">
+      nav-2
+    </md-card>
+  </md-grid-tile>
+  <md-grid-tile colspan="1" rowspan="2">
+  </md-grid-tile>
 
-</div>
+  <md-grid-tile colspan="3" rowspan="2">
+
+    <md-card style="width: 90%">
+      <md-card-header>
+        <md-card-title>Card Title 01</md-card-title>
+      </md-card-header>
+      <md-card-content>
+        <button md-button (click)="stopSpinner()">Click me!</button>
+      </md-card-content>
+    </md-card>
+
+  </md-grid-tile>
+
+
+
+</md-grid-list>

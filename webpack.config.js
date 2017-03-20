@@ -120,16 +120,6 @@ module.exports = function () {
         loader: 'file-loader?name=assets/[name].[hash].[ext]?'
       },
 
-      // i18n messages Loader
-      {
-        test: /\.xlf$/,
-        use: [
-          {
-            loader: 'file-loader'
-          },
-        ]
-      },
-
     ]
   };
 
