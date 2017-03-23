@@ -1,0 +1,21 @@
+// list of colors as sass variables with default values 
+$success-color:         #264409 !default;
+$success-bg-color:      #e6efc2 !default;
+$success-border-color:  #c6d880 !default;
+
+// Sorry here you have to repeate your self :-(
+// Map with color names and values
+$cb-colors: (
+  'success-color':          $success-color,
+  'success-bg-color':       $success-bg-color,
+  'success-border-color':   $success-border-color
+);
+
+// For each color create a background color class e.g. bg-success-color
+@each $color-name, $color-value in $cb-colors {
+
+  .bg-#{$color-name} {
+    background-color: #{$color-value};
+  }
+
+}
