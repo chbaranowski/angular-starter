@@ -1,4 +1,3 @@
-import { KeyboardEvent, MouseEvent } from '@angular/platform-browser/src/facade/browser';
 import { Component } from '@angular/core';
 
 @Component({
