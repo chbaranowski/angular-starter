@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
 export class CarouselExampleComponent {
 
   images = [
-    { url: require('./../../images/emilycampbell.jpg').toString(), title: 'emily campbell' },
-    { url: require('./../../images/kai-oberhauser.jpg').toString(), title: 'kai oberhauser' },
-    { url: require('./../../images/maxheaaauki-vincent-guth.jpg').toString(), title: 'maxheaaauki vincent guth' },
-    { url: require('./../../images/kai-oberhauser.jpg').toString(), title: 'kai oberhauser' },
+    { url: '/assets/images/emilycampbell.jpg', title: 'emily campbell' },
+    { url: '/assets/images/kai-oberhauser.jpg', title: 'kai oberhauser' },
+    { url: '/assets/images/maxheaaauki-vincent-guth.jpg', title: 'maxheaaauki vincent guth' },
+    { url: '/assets/images/kai-oberhauser.jpg', title: 'kai oberhauser' },
   ];
 
 }

@@ -1,25 +1,20 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "outDir": "./dist/out-tsc",
+    "baseUrl": "src",
     "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "lib": ["es2015", "dom"],
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
+    "target": "es5",
     "typeRoots": [
-      "./node_modules/@types/"
+      "node_modules/@types"
     ],
-    "outDir": "dist/classes"
-  },
-  "compileOnSave": true,
-  "exclude": [
-    "node_modules/*"
-  ],
-  "awesomeTypescriptLoaderOptions": {
-    "forkChecker": true,
-    "useWebpackText": true 
+    "lib": [
+      "es2016",
+      "dom"
+    ]
   }
 }

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class I18nComponent implements OnInit {
 
-  emilycampbellImageUrl = require('./../../images/emilycampbell.jpg').toString();
+  emilycampbellImageUrl = '/assets/images/emilycampbell.jpg';
 
   teamSize = 0;
 
