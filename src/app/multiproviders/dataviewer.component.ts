@@ -16,9 +16,10 @@ import { DataSource, DataSourceService, DATA_SOURCE } from './datasource.service
 })
 export class DataViewerComponent {
 
-  constructor( @Inject(DATA_SOURCE)
-  private dataSourceInjected: DataSource[],
-    private dataSourceService: DataSourceService) { }
+  constructor(
+    @Inject(DATA_SOURCE)
+    public dataSourceInjected: DataSource[],
+    public dataSourceService: DataSourceService) { }
 
   @Input('dataSource') set dataSourceName(dataSourceName: string) {
     let dataSource = this.dataSourceInjected

@@ -16,7 +16,7 @@ export class DataSourceComponent implements OnInit, OnDestroy {
 
   constructor(
     @Inject(DATA_SOURCE)
-    private dataSources: DataSource[],
+    public dataSources: DataSource[],
     private dataSourceService: DataSourceService) {
       this.selectedDataSource = dataSources[0].name;
   }

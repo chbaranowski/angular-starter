@@ -8,5 +8,5 @@ import { Configuration } from './configuration.service';
   `
 })
 export class ConfigurationComponent {
-  constructor(private config: Configuration) { }
+  constructor(public config: Configuration) { }
 }

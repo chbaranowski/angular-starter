@@ -9,9 +9,6 @@ import { Component } from '@angular/core';
 export class ChildRoutersComponent {}
 
 @Component({
-  template: `
-  <h1>Router Example</h1>
-  <h4>Sub-component routes in named outlets</h4>
-  <content-named-outlets></content-named-outlets>`
+  template: "Hello World"
 })
 export class NamedRoutersComponent {}

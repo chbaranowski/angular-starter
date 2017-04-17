@@ -7,7 +7,7 @@ import { NamesService } from '../names.service';
 })
 export class TableComponent implements OnInit {
 
-  private data: string[];
+  data: string[];
 
   constructor(
     private namesService: NamesService,

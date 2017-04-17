@@ -7,10 +7,4 @@ import { Router } from '@angular/router';
 })
 export class ContentChildComponent {
 
-  private router: Router;
-
-  constructor($router: Router) {
-    this.router = $router;
-  }
-
 }

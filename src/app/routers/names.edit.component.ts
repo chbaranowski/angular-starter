@@ -12,8 +12,8 @@ import 'rxjs/add/operator/switchMap';
 })
 export class NamesEditComponent implements OnInit {
 
-  private selectedName: string;
-  private index: number;
+  selectedName: string;
+  index: number;
 
   constructor(
     private route: ActivatedRoute,

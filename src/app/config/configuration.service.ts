@@ -20,11 +20,6 @@ export class Configuration {
   /** Some number config example property (default is 42). */
   someNumber = 42;
 
-  constructor(
-    /** The configuration profile defined by environment variable with the name CONFIG_PROFILE. */
-    readonly profile: string
-  ) { }
-
 }
 
 /**
@@ -33,6 +28,6 @@ export class Configuration {
  */
 export function createConfiguration(): Configuration {
   let config: Configuration;
-  config = Object.assign(new Configuration(environment.name), environment);
+  config = Object.assign(new Configuration(), environment);
   return config;
 };

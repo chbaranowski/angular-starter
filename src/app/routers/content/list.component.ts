@@ -1,18 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NamesService } from '../names.service';
 
 @Component({
   templateUrl: './list.component.html'
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
 
-  private data: string[];
+  data: string[];
 
-  constructor(
-    private namesService: NamesService
-  ) {}
+  constructor(private namesService: NamesService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.namesService.get().then(data => {
       this.data = data;
     });
