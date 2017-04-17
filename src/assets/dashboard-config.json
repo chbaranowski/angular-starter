@@ -1,0 +1,24 @@
+{
+  "widgets": [
+    {
+      "type": "WidgetAComponent",
+      "configuration": {
+        "title": "Widget A",
+        "query": "Search for all elements"
+      }
+    },
+    {
+      "type": "WidgetBComponent",
+      "configuration": {
+        "title": "Widget B",
+        "num": 1000
+      }
+    },
+    {
+      "type": "WidgetAComponent",
+      "configuration": {
+        "title": "Widget A"
+      }
+    }
+  ]
+}

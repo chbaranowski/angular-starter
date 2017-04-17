@@ -1,0 +1,4 @@
+<div *ngFor="let widget of config.widgets">
+  {{widget.configuration.title}}
+  <widget [type]="widget.type" [config]="widget.configuration"></widget>
+</div>

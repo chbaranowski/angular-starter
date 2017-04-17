@@ -19,6 +19,11 @@ export declare type MenuRoutes = MenuRoute[];
  */
 export const appRoutes: MenuRoutes = [
   {
+    path: '',
+    redirectTo: '/config',
+    pathMatch: 'full'
+  },
+  {
     path: 'config',
     component: ConfigurationComponent,
     nav: true
