@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   constructor(private http: Http) { }
 
   ngOnInit() {
+    // load configuration for the dashboard widgets form the back-end.
     this.http.get('/assets/dashboard-config.json').subscribe(res => {
       this.config = res.json();
     });

@@ -3,6 +3,7 @@ import { Component, OnInit, Input, ViewContainerRef, ComponentFactoryResolver, T
 import { DashboardModule } from './dashboard.module';
 import { WidgetAComponent } from '../widgets/widget-a.component';
 import { WidgetBComponent } from '../widgets/widget-b.component';
+import { dashboardWidgets } from './dashboard.widgets';
 
 @Component({
   selector: 'widget',
@@ -21,7 +22,7 @@ export class WidgetComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    const componentType = DashboardModule.componentTypes.find(widgetType => widgetType.name === this.type);
+    const componentType = dashboardWidgets.find(widgetType => widgetType.name === this.type);
 
     // We create an injector to pass down
     const injector = ReflectiveInjector.fromResolvedProviders([], this.dynamicComponentContainer.parentInjector);

@@ -21,7 +21,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     CoreComponentsModule,
     RouterModule.forRoot(appRoutes),
-    DashboardModule.withComponents(),
+    DashboardModule.withWidgets(),
   ],
   declarations: [
     AppComponent,
