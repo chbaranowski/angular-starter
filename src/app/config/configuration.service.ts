@@ -3,9 +3,8 @@ import { environment } from '../../environments/environment';
 
 /**
  * Class for the application configuration.
- * 
  * The JSON configuration for the class can be found in the directory '../../configuration'.
- * Default configuration is config.json the properties can be override in the environment specific 
+ * Default configuration is config.json the properties can be override in the environment specific
  * JSON configuration files config-${env}.json
  */
 @Injectable()
@@ -27,7 +26,7 @@ export class Configuration {
  * based on the environment and the JSON config.
  */
 export function createConfiguration(): Configuration {
-  let config: Configuration;
-  config = Object.assign(new Configuration(), environment);
+  const config: Configuration = Object.assign(new Configuration(), environment);
   return config;
-};
+}
+

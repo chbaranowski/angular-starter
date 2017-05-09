@@ -13,16 +13,15 @@ import { DashboardModule } from './dashboard/dashboard.module';
 import { WidgetAComponent } from './widgets/widget-a.component';
 import { WidgetBComponent } from './widgets/widget-b.component';
 
+import { environment } from '../environments/environment';
+
 @NgModule({
   imports: [
     HttpModule,
     BrowserModule,
     CoreComponentsModule,
-    DashboardModule.withComponents([
-      WidgetAComponent,
-      WidgetBComponent
-    ]),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    DashboardModule.withComponents(),
   ],
   declarations: [
     AppComponent,
@@ -34,4 +33,5 @@ import { WidgetBComponent } from './widgets/widget-b.component';
   bootstrap: [AppComponent]
 })
 export class AppModule {
+
 }

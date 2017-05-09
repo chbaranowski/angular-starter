@@ -1,6 +1,8 @@
 import { OnDestroy } from '@angular/core/core';
 import { Component, OnInit, Input, ViewContainerRef, ComponentFactoryResolver, Type, ReflectiveInjector, ViewChild } from '@angular/core';
 import { DashboardModule } from './dashboard.module';
+import { WidgetAComponent } from '../widgets/widget-a.component';
+import { WidgetBComponent } from '../widgets/widget-b.component';
 
 @Component({
   selector: 'widget',
